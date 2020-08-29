@@ -42,14 +42,15 @@ dependencies {
 
 --- 
 
-<p align="end"><b><i>Koding</i></b></p>
-
 **Show dialog to choose bonded device** bind your device initially from
 the bluetooth config:
 ```java
-Printama.scan(this, printerName -> {
-    ...
-});
+    String value ="30-08-2020";
+
+    String reformatOneString = MyBaseUtilsDate.reformatDate(value,"dd-MM-yyyy","yyyy-MM-dd");
+    Log.d(TAG, "onCreate: "+reformatOneString);
+
+    Log.d(TAG, "onCreate: "+MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd"));
 ```
 
 ---
