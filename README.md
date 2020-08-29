@@ -53,7 +53,7 @@ Log.d(TAG, "onCreate: "+reformatOneString);
 **Mengambil CurrentTime dengan format yang diinginkan**
 ```java
 String currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd");
-Log.d(TAG, "onCreate: "+cuurentTime);
+Log.d(TAG, "onCreate: "+currentTime);
 ```
 
 ---
