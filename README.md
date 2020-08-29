@@ -42,7 +42,7 @@ dependencies {
 
 --- 
 
-**Mengganti format tanggal yang didapat** value yang disarankan adalah String.
+**Conversi Format waktu** value yang disarankan adalah String.
 ```java
 String value ="30-08-2020";
 
@@ -50,7 +50,7 @@ String reformatOneString = MyBaseUtilsDate.reformatDate(value,"dd-MM-yyyy","yyyy
 Log.d(TAG, "onCreate: "+reformatOneString);
 ```
 
-**Mengambil CurrentTime dengan format yang diinginkan**
+**Current Time dengan format yang diinginkan**
 ```java
 String currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd");
 Log.d(TAG, "onCreate: "+currentTime);
