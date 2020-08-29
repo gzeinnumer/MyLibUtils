@@ -3,6 +3,8 @@ package com.gzeinnumer.gznutils;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.gzeinnumer.gznutils.utils.MyBaseUtilsDate;
+
 public class MyBaseUtilsDateHowToClass {
 
     private static final String TAG = "gznutilsHowToClass";

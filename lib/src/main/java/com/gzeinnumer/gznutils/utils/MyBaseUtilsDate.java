@@ -1,4 +1,4 @@
-package com.gzeinnumer.gznutils;
+package com.gzeinnumer.gznutils.utils;
 
 import android.annotation.SuppressLint;
 
