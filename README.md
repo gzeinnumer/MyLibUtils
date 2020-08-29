@@ -3,8 +3,57 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/gzeinnumer"><img alt="Github" src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
-    <a><img alt="License" src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
-    <a><img alt="Pull request" src="https://img.shields.io/badge/Version-0.0.2-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-0.0.2-brightgreen.svg?style=flat"></a>
+    <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
+    <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <h3 align="center">MyLibUtils</h3>
 </p>
+
+---
+
+## Download
+
+#### Gradle
+**Step 1.** tambahkan maven jitpack.io ke build.gradle (Project) :
+```gradle
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+
+**Step 2.** tambahkan depedensi ke build.gradle (Module) :
+```gradle
+dependencies {
+  implementation 'com.github.gzeinnumer:MyLibUtils:versi'
+}
+```
+
+---
+
+### Featur List
+- [x] Conversi Format waktu . contohnya dari yyyy-MM-dd ke dd-MM-yyyy
+- [x] Current Time dengan format yang diinginkan
+
+### Tech stack and 3rd library
+- SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
+
+--- 
+
+<p align="end"><b><i>Koding</i></b></p>
+
+**Show dialog to choose bonded device** bind your device initially from
+the bluetooth config:
+```java
+Printama.scan(this, printerName -> {
+    ...
+});
+```
+
+---
+
+```
+Copyright 2020 M. Fadli Zein
+```
