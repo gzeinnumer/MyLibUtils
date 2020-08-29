@@ -42,15 +42,18 @@ dependencies {
 
 --- 
 
-**Show dialog to choose bonded device** bind your device initially from
-the bluetooth config:
+**Mengganti format tanggal yang didapat** value yang disarankan adalah String.
 ```java
-    String value ="30-08-2020";
+String value ="30-08-2020";
 
-    String reformatOneString = MyBaseUtilsDate.reformatDate(value,"dd-MM-yyyy","yyyy-MM-dd");
-    Log.d(TAG, "onCreate: "+reformatOneString);
+String reformatOneString = MyBaseUtilsDate.reformatDate(value,"dd-MM-yyyy","yyyy-MM-dd");
+Log.d(TAG, "onCreate: "+reformatOneString);
+```
 
-    Log.d(TAG, "onCreate: "+MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd"));
+**Mengambil CurrentTime dengan format yang di mau**
+```java
+String currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd");
+Log.d(TAG, "onCreate: "+cuurentTime);
 ```
 
 ---
