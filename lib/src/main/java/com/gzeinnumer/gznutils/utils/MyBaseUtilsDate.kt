@@ -5,7 +5,7 @@ import java.util.*
 
 //thanks to https://github.com/Egi10 for kotlin in MyLibUtils:0.0.3
 
-fun String.reformatDate(from: Array<String?>, to: Array<String?>, locale: Locale? = Locale.getDefault()): String? {
+fun String.reformatDate(from: Array<String?>, to: Array<String?>, locale: Locale = Locale.getDefault()): String? {
     val patternFrom = StringBuilder()
     for (s in from) patternFrom.append(s)
     var format = SimpleDateFormat(patternFrom.toString(), locale)
