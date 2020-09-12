@@ -34,13 +34,3 @@ fun String.reformatDate(from: String?, to: String?, locale: Locale = Locale.getD
         "Date formater error"
     }
 }
-
-class MyBaseUtilsDate {
-    companion object {
-        fun getCurrentTime(requestFormat: String, locale: Locale = Locale.getDefault()): String? {
-            val format = SimpleDateFormat(requestFormat, locale) //dd/MM/yyyy
-            val now = Date()
-            return format.format(now)
-        }
-    }
-}
