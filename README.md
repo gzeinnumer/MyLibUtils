@@ -58,12 +58,12 @@ Log.d(TAG, "onCreate: "+currentTime);
 ```
 
 ##Kotlin
-```kotlin
 **Conversi Format waktu** value yang disarankan adalah String.
+```kotlin
 var value = "30-08-2020"
 Log.d(TAG, "onCreate: before : $value")
 
-value = value.reformatDate("dd-MM-yyyy", "yyyy-MM-dd", Locale.getDefault()).toString()
+value = value.reformatDate("dd-MM-yyyy", "yyyy-MM-dd", Locale.getDefault())
 Log.d(TAG, "onCreate: after : $value")
 ```
 
