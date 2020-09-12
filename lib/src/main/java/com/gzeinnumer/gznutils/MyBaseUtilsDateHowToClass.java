@@ -5,6 +5,8 @@ import android.util.Log;
 
 import com.gzeinnumer.gznutils.utils.MyBaseUtilsDate;
 
+import java.util.Locale;
+
 public class MyBaseUtilsDateHowToClass {
 
     private static final String TAG = "gznutilsHowToClass";
@@ -32,12 +34,12 @@ public class MyBaseUtilsDateHowToClass {
                         MyBaseUtilsDate.F_MINUTES, " ",
                         MyBaseUtilsDate.F_AM_PM,
 
-                });
+                }, Locale.getDefault());
         Log.d(TAG, "onCreate:reformatMultiArray "+reformatMultiArray);
 
-        String reformatOneString = MyBaseUtilsDate.reformatDate(value,"EEE, dd MMM yyyy hh:mm:ss Z","MMM dd,yyyy hh:mm a");
+        String reformatOneString = MyBaseUtilsDate.reformatDate(value,"EEE, dd MMM yyyy hh:mm:ss Z","MMM dd,yyyy hh:mm a", Locale.getDefault());
         Log.d(TAG, "onCreate: "+reformatOneString);
 
-        Log.d(TAG, "onCreate: "+MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd"));
+        Log.d(TAG, "onCreate: "+MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd".toLowerCase(), Locale.getDefault()));
     }
 }
