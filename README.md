@@ -42,18 +42,35 @@ dependencies {
 
 --- 
 
+##Java
 **Conversi Format waktu** value yang disarankan adalah String.
 ```java
 String value ="30-08-2020";
 
-String reformatOneString = MyBaseUtilsDate.reformatDate(value,"dd-MM-yyyy","yyyy-MM-dd");
+String reformatOneString = MyBaseUtilsDate.reformatDate(value,"dd-MM-yyyy","yyyy-MM-dd", Locale.getDefault());
 Log.d(TAG, "onCreate: "+reformatOneString);
 ```
 
 **Current Time dengan format yang diinginkan**
 ```java
-String currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd");
+String currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
 Log.d(TAG, "onCreate: "+currentTime);
+```
+
+##Kotlin
+```kotlin
+**Conversi Format waktu** value yang disarankan adalah String.
+var value = "30-08-2020"
+Log.d(TAG, "onCreate: before : $value")
+
+value = value.reformatDate("dd-MM-yyyy", "yyyy-MM-dd", Locale.getDefault()).toString()
+Log.d(TAG, "onCreate: after : $value")
+```
+
+**Current Time dengan format yang diinginkan**
+```kotlin
+val currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault())
+Log.d(TAG, "onCreate: currentTime : $currentTime")
 ```
 
 ---
