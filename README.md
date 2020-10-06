@@ -81,9 +81,9 @@ Log.d(TAG, "onCreate: currentTime : $currentTime")
 ### **Is Date In Range?**
 To check your date is in range between 2 date or not.
 > **Java**
+* Date with `String`
 ```java
 //please make sure your date format are the same.
-//with String
 String toCheck = "07/10/2020";
 String startDate ="04/10/2020";
 String endDate = "08/10/2020";
@@ -91,12 +91,16 @@ String endDate = "08/10/2020";
 boolean isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate);
 
 Log.d(TAG, "onCreate: "+isInRange);
-
-//or `Date()`
+```
+* Date with `Date()`
+```java
 try {
-    Date toCheck  = new SimpleDateFormat("dd/MM/yyyy").parse("07/10/2020");
-    Date startDate= new SimpleDateFormat("dd/MM/yyyy").parse("04/10/2020");
-    Date endDate  = new SimpleDateFormat("dd/MM/yyyy").parse("08/10/2020");
+    String formatDate = "dd/MM/yyyy";
+    SimpleDateFormat df = new SimpleDateFormat(formatDate);
+    
+    Date toCheck   = df.parse("07/10/2020");
+    Date startDate = df.parse("04/10/2020");
+    Date endDate   = df.parse("08/10/2020");
 
     boolean isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate);
 
