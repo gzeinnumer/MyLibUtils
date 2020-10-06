@@ -9,7 +9,7 @@
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
     <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
     <br>
-    <p>Simple function for **Date** and **String**.</p>
+    <p>Simple function for <b>Date</b> and <b>String</b>.</p>
 </p>
 
 ---
