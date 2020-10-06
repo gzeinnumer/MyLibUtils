@@ -177,7 +177,3 @@ Log.d(TAG, "onCreate: "+result);
 ```
 Copyright 2020 M. Fadli Zein
 ```
-
-<div class="border">
-  .border
-</div>
