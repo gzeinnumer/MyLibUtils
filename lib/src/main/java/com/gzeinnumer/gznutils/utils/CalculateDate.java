@@ -22,38 +22,34 @@ public class CalculateDate {
         }
     }
 
-    public Calendar build() {
-        return this.cal;
-    }
-
-    public Calendar addYear(int addYear) {
+    public CalculateDate addYear(int addYear) {
         this.cal.add(Calendar.YEAR, addYear);
-        return this.cal;
+        return this;
     }
 
-    public Calendar addMonth(int addMonth) {
+    public CalculateDate addMonth(int addMonth) {
         this.cal.add(Calendar.MONTH, addMonth);
-        return this.cal;
+        return this;
     }
 
-    public Calendar addWeek(int addWeek) {
+    public CalculateDate addWeek(int addWeek) {
         this.cal.add(Calendar.DAY_OF_MONTH, addWeek * 7);
-        return this.cal;
+        return this;
     }
 
-    public Calendar addDay(int addDay) {
+    public CalculateDate addDay(int addDay) {
         this.cal.add(Calendar.DAY_OF_MONTH, addDay);
-        return this.cal;
+        return this;
     }
 
-    public Calendar addHour(int addHour) {
+    public CalculateDate addHour(int addHour) {
         this.cal.add(Calendar.HOUR_OF_DAY, addHour);
-        return this.cal;
+        return this;
     }
 
-    public Calendar addMinutes(int addMinutes) {
+    public CalculateDate addMinutes(int addMinutes) {
         this.cal.add(Calendar.MINUTE, addMinutes);
-        return this.cal;
+        return this;
     }
 
     @SuppressLint("SimpleDateFormat")
