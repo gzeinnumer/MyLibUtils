@@ -22,6 +22,10 @@ public class CalculateDate {
         }
     }
 
+    public Calendar build() {
+        return this.cal;
+    }
+
     public Calendar addYear(int addYear) {
         this.cal.add(Calendar.YEAR, addYear);
         return this.cal;
