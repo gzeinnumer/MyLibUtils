@@ -110,6 +110,7 @@ try {
 }
 ```
 > **Kotlin**
+* Date with `String`
 ```kotlin
 //please make sure your date format are the same.
 //with String
@@ -120,7 +121,9 @@ val endDate = "08/10/2020"
 val isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate)
 
 Log.d(TAG, "onCreate: "+isInRange)
-
+```
+* Date with `Date()`
+```kotlin
 //or `Date()`
 try {
     val toCheck  = SimpleDateFormat("dd/MM/yyyy").parse("07/10/2020")
