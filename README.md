@@ -127,9 +127,11 @@ Log.d(TAG, "onCreate: "+isInRange)
 ```kotlin
 //or `Date()`
 try {
-    val toCheck  = SimpleDateFormat("dd/MM/yyyy").parse("07/10/2020")
-    val startDate= SimpleDateFormat("dd/MM/yyyy").parse("04/10/2020")
-    val endDate  = SimpleDateFormat("dd/MM/yyyy").parse("08/10/2020")
+    val formatDate = "dd/MM/yyyy"
+    val df = SimpleDateFormat(formatDate)
+    val toCheck  = df.parse("07/10/2020")
+    val startDate= df.parse("04/10/2020")
+    val endDate  = df.parse("08/10/2020")
 
     val isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate)
 
