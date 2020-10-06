@@ -34,6 +34,7 @@ dependencies {
 - [x] Convert **Time Format**. example from `yyyy-MM-dd` to `dd-MM-yyyy`.
 - [x] **Current Time** with custom format. example `yyyy-MM-dd hh:mm`.
 - [x] **Is Date In Range?**.
+- [x] **Calculate Date**.
 
 ## Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
@@ -136,6 +137,37 @@ try {
 } catch (e : ParseException) {
     
 }
+```
+
+### **Calculate Date**
+Add date with simple way.
+> **Java**
+```java
+//please make sure time and pattern has same format
+String time = "2014-01-11 10:10";
+String pattern = "yyyy-MM-dd HH:mm";
+
+CalculateDate calculateDate = new CalculateDate(time, pattern).addYear(2).addMonth(2).addDay(2);
+calculateDate.addWeek(1);
+calculateDate.addHour(2);
+calculateDate.addMinutes(2);
+
+String result = calculateDate.getResult();
+Log.d(TAG, "onCreate: "+result);
+```
+> **Kotlin**
+```kotlin
+//please make sure time and pattern has same format
+val time = "2014-01-11 10:10"
+val pattern = "yyyy-MM-dd HH:mm"
+
+val calculateDate = CalculateDate(time, pattern).addYear(2).addMonth(2).addDay(2)
+calculateDate.addWeek(1)
+calculateDate.addHour(2)
+calculateDate.addMinutes(2)
+
+val result = calculateDate.getResult()
+Log.d(TAG, "onCreate: "+result);
 ```
 
 ---
