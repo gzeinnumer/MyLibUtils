@@ -60,10 +60,17 @@ public class MyBaseUtilsDate {
         else return "Date formater error";
     }
 
-
     public static String getCurrentTime(String requestFormat, Locale locale) {
         SimpleDateFormat format = new SimpleDateFormat(requestFormat, locale);//dd/MM/yyyy
         Date now = new Date();
         return format.format(now);
+    }
+
+    public static boolean checkBetween(Date dateToCheck, Date startDate, Date endDate) {
+        return dateToCheck.compareTo(startDate) >= 0 && dateToCheck.compareTo(endDate) <= 0;
+    }
+
+    public static boolean checkBetween(String dateToCheck, String startDate, String endDate) {
+        return dateToCheck.compareTo(startDate) >= 0 && dateToCheck.compareTo(endDate) <= 0;
     }
 }

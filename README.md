@@ -5,56 +5,58 @@
 <p align="center">
     <a><img src="https://img.shields.io/badge/Version-0.0.9-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
-    <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
-    <br>   
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
-    <p>Kumpulan function sederhana yang sering dipakai dalam development program android, dokumen ini dibuat berdasarkan pengalaman saya, kasih masukan kalau ada yang kurang. terimakasih karna sudah berkunjung</p>
-</p>
-
-<p align="center">
+    <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
+    <br>
+    <p>Simple function for what?</p>
 </p>
 
 ---
 
 ## Download
-
-#### Gradle
-**Step 1.** tambahkan maven jitpack.io ke build.gradle (Project) :
+**Step 1.** add maven jitpack.io in build.gradle (Project) :
 ```gradle
+// build.gradle project
 allprojects {
   repositories {
     ...
     maven { url 'https://jitpack.io' }
   }
 }
-```
 
-**Step 2.** tambahkan depedensi ke build.gradle (Module) :
-```gradle
+// build.gradle app/module
 dependencies {
-  implementation 'com.github.gzeinnumer:MyLibUtils:versi'
+  implementation 'com.github.gzeinnumer:MyLibUtils:version'
 }
 ```
 
----
+## Featur List
+- [x] Convert **Time Format**. example from `yyyy-MM-dd` to `dd-MM-yyyy`.
+- [x] Current Time with custom format.
 
-### Featur List
-- [x] Conversi Format waktu . contohnya dari yyyy-MM-dd ke dd-MM-yyyy
-- [x] Current Time dengan format yang diinginkan
-
-### Tech stack and 3rd library
+## Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
 --- 
 
-##Java
-**Conversi Format waktu** value yang disarankan adalah String.
+## Use
+
+### Convert **Time Format**.
+**Java**
 ```java
 String value ="30-08-2020";
 
 String reformatOneString = MyBaseUtilsDate.reformatDate(value,"dd-MM-yyyy","yyyy-MM-dd", Locale.getDefault());
 Log.d(TAG, "onCreate: "+reformatOneString);
+```
+**Kotlin**
+```kotlin
+var value = "30-08-2020"
+Log.d(TAG, "onCreate: before : $value")
+
+value = value.reformatDate("dd-MM-yyyy", "yyyy-MM-dd", Locale.getDefault())
+Log.d(TAG, "onCreate: after : $value")
 ```
 
 **Current Time dengan format yang diinginkan**
@@ -65,13 +67,6 @@ Log.d(TAG, "onCreate: "+currentTime);
 
 ##Kotlin
 **Conversi Format waktu** value yang disarankan adalah String.
-```kotlin
-var value = "30-08-2020"
-Log.d(TAG, "onCreate: before : $value")
-
-value = value.reformatDate("dd-MM-yyyy", "yyyy-MM-dd", Locale.getDefault())
-Log.d(TAG, "onCreate: after : $value")
-```
 
 **Current Time dengan format yang diinginkan**
 ```kotlin
