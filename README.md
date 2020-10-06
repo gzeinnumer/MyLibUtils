@@ -82,23 +82,53 @@ Log.d(TAG, "onCreate: currentTime : $currentTime")
 To check your date is in range between 2 date or not.
 > **Java**
 ```java
+//please make sure your date format are the same.
+//with String
 String toCheck = "07/10/2020";
 String startDate ="04/10/2020";
 String endDate = "08/10/2020";
 
-boolean isInRange = checkBetween(toCheck, startDate,endDate);
+boolean isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate);
 
-Log.d(TAG, "testMtBaseutils1: "+isInRange);
+Log.d(TAG, "onCreate: "+isInRange);
+
+//or `Date()`
+try {
+    Date toCheck  = new SimpleDateFormat("dd/MM/yyyy").parse("07/10/2020");
+    Date startDate= new SimpleDateFormat("dd/MM/yyyy").parse("04/10/2020");
+    Date endDate  = new SimpleDateFormat("dd/MM/yyyy").parse("08/10/2020");
+
+    boolean isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate);
+
+    Log.d(TAG, "onCreate: "+isInRange);
+} catch (ParseException e) {
+    
+}
 ```
 > **Kotlin**
 ```kotlin
+//please make sure your date format are the same.
+//with String
 val toCheck = "07/10/2020"
 val startDate ="04/10/2020"
 val endDate = "08/10/2020"
 
-val isInRange = checkBetween(toCheck, startDate,endDate)
+val isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate)
 
-Log.d(TAG, "testMtBaseutils1: "+isInRange)
+Log.d(TAG, "onCreate: "+isInRange)
+
+//or `Date()`
+try {
+    val toCheck  = SimpleDateFormat("dd/MM/yyyy").parse("07/10/2020")
+    val startDate= SimpleDateFormat("dd/MM/yyyy").parse("04/10/2020")
+    val endDate  = SimpleDateFormat("dd/MM/yyyy").parse("08/10/2020")
+
+    val isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate)
+
+    Log.d(TAG, "onCreate: "+isInRange);
+} catch (e : ParseException) {
+    
+}
 ```
 
 ---
