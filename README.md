@@ -9,11 +9,10 @@
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
     <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
     <br>
-    <p>Simple function for what?</p>
+    <p>Simple function for **Date** and **String**.</p>
 </p>
 
 ---
-
 ## Download
 **Step 1.** add maven jitpack.io in build.gradle (Project) :
 ```gradle
@@ -31,15 +30,15 @@ dependencies {
 }
 ```
 
-## Featur List
+## Feature List
 - [x] Convert **Time Format**. example from `yyyy-MM-dd` to `dd-MM-yyyy`.
-- [x] Current Time with custom format.
+- [x] **Current Time** with custom format. example `yyyy-MM-dd hh:mm`.
+- [x] **Is Date In Range?**.
 
 ## Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
---- 
-
+---
 ## Use
 
 ### Convert **Time Format**.
@@ -67,7 +66,7 @@ value = value.reformatDate(oldFormat,newFormat, Locale.getDefault())
 Log.d(TAG, "onCreate: after : $value")
 ```
 
-### Current Time with custom format.
+### **Current Time** with custom format.
 > **Java**
 ```java
 String currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
@@ -77,6 +76,29 @@ Log.d(TAG, "onCreate: "+currentTime);
 ```kotlin
 val currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault())
 Log.d(TAG, "onCreate: currentTime : $currentTime")
+```
+
+### **Is Date In Range?**
+To check your date is in range between 2 date or not.
+> **Java**
+```java
+String toCheck = "07/10/2020";
+String startDate ="04/10/2020";
+String endDate = "08/10/2020";
+
+boolean isInRange = checkBetween(toCheck, startDate,endDate);
+
+Log.d(TAG, "testMtBaseutils1: "+isInRange);
+```
+> **Kotlin**
+```kotlin
+val toCheck = "07/10/2020"
+val startDate ="04/10/2020"
+val endDate = "08/10/2020"
+
+val isInRange = checkBetween(toCheck, startDate,endDate)
+
+Log.d(TAG, "testMtBaseutils1: "+isInRange)
 ```
 
 ---
