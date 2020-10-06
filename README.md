@@ -43,7 +43,7 @@ dependencies {
 ## Use
 
 ### Convert **Time Format**.
-**Java**
+> **Java**
 ```java
 String value ="30-08-2020";
 
@@ -54,7 +54,7 @@ String reformatOneString = MyBaseUtilsDate.reformatDate(value,oldFormat,newForma
 
 Log.d(TAG, "onCreate: "+reformatOneString);
 ```
-**Kotlin**
+> **Kotlin**
 ```kotlin
 var value = "30-08-2020"
 Log.d(TAG, "onCreate: before : $value")
@@ -68,10 +68,12 @@ Log.d(TAG, "onCreate: after : $value")
 ```
 
 ### Current Time with custom format.
+> **Java**
 ```java
 String currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
 Log.d(TAG, "onCreate: "+currentTime);
 ```
+> **Kotlin**
 ```kotlin
 val currentTime = MyBaseUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault())
 Log.d(TAG, "onCreate: currentTime : $currentTime")
