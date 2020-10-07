@@ -84,6 +84,8 @@ To check your date is in range between 2 date or not.
 > **Java**
 ```java
 //please make sure your date format are the same.
+
+//with String
 String toCheck = "07/10/2020";
 String startDate ="04/10/2020";
 String endDate = "08/10/2020";
@@ -111,6 +113,7 @@ try {
 > **Kotlin**
 ```kotlin
 //please make sure your date format are the same.
+
 //with String
 val toCheck = "07/10/2020"
 val startDate ="04/10/2020"
