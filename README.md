@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <a><img src="https://img.shields.io/badge/Version-0.1.0-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-0.2.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
@@ -193,7 +193,7 @@ String result_5 = MyBaseUtilsString.removeFirstChar(str);
 Log.d(TAG, "onCreate_5: "+ result_5); //   !??!@Hello Zein
 
 String result_6 = MyBaseUtilsString.removeFirstCharCustomLength(str,3);
-Log.d(TAG, "onCreate_6: "+ result_6); //   @Hello Zein
+Log.d(TAG, "onCreate_6: "+ result_6); //   ?!@Hello Zein
 
 String url = "https://asset-a.grid.id/crop/0x0:0x0/360x240/photo/2020/04/09/663219154.png";
 String result_7 = MyBaseUtilsString.getNameFromUrl(url);
