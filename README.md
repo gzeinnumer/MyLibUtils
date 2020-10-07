@@ -31,8 +31,8 @@ dependencies {
 ```
 
 ## Feature List
-- [x] Convert **Time Format**. example from `yyyy-MM-dd` to `dd-MM-yyyy`. ([DOCS](https://github.com/gzeinnumer/MyLibUtils#convert-time-format))
-- [x] **Current Time** with custom format. example `yyyy-MM-dd hh:mm`.([DOCS](https://github.com/gzeinnumer/MyLibUtils#current-time-with-custom-format))
+- [x] **Convert Time Format**. example from `2020-10-14` to `14-10-2020`. ([DOCS](https://github.com/gzeinnumer/MyLibUtils#convert-time-format))
+- [x] **Current Time** with custom format. example `2020-10-14 16:50`.([DOCS](https://github.com/gzeinnumer/MyLibUtils#current-time-with-custom-format))
 - [x] **Is Date In Range?**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#is-date-in-range))
 - [x] **Calculate Date**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#calculate-date))
 
@@ -82,7 +82,6 @@ Log.d(TAG, "onCreate: currentTime : $currentTime")
 ### **Is Date In Range?**
 To check your date is in range between 2 date or not.
 > **Java**
-* Date with `String`
 ```java
 //please make sure your date format are the same.
 String toCheck = "07/10/2020";
@@ -92,9 +91,8 @@ String endDate = "08/10/2020";
 boolean isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate);
 
 Log.d(TAG, "onCreate: "+isInRange);
-```
-* Date with `Date()`
-```java
+
+//or `Date()`
 try {
     String formatDate = "dd/MM/yyyy";
     SimpleDateFormat df = new SimpleDateFormat(formatDate);
@@ -111,7 +109,6 @@ try {
 }
 ```
 > **Kotlin**
-* Date with `String`
 ```kotlin
 //please make sure your date format are the same.
 //with String
@@ -122,9 +119,7 @@ val endDate = "08/10/2020"
 val isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate)
 
 Log.d(TAG, "onCreate: "+isInRange)
-```
-* Date with `Date()`
-```kotlin
+
 //or `Date()`
 try {
     val formatDate = "dd/MM/yyyy"
