@@ -39,7 +39,7 @@ public class MyBaseUtilsString {
         if (text.length() == 0) {
             return "";
         }
-        return text.substring(5);
+        return text.substring(count);
     }
 
     public static String removeAllSimbol(String text, String replaceWith) {
@@ -75,7 +75,7 @@ public class MyBaseUtilsString {
     }
 
     public static String getNameFromUrl(String url) {
-        return url.substring(url.lastIndexOf('/') + 1, url.length());
+        return url.substring(url.lastIndexOf('/') + 1);
     }
 
     public static String removeExtension(String fileName) {
