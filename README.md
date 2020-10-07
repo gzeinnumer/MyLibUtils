@@ -31,10 +31,10 @@ dependencies {
 ```
 
 ## Feature List
-- [x] Convert **Time Format**. example from `yyyy-MM-dd` to `dd-MM-yyyy`.
-- [x] **Current Time** with custom format. example `yyyy-MM-dd hh:mm`.
-- [x] **Is Date In Range?**.
-- [x] **Calculate Date**.
+- [x] Convert **Time Format**. example from `yyyy-MM-dd` to `dd-MM-yyyy`. ([DOCS](https://github.com/gzeinnumer/MyLibUtils#convert-time-format))
+- [x] **Current Time** with custom format. example `yyyy-MM-dd hh:mm`.([DOCS](https://github.com/gzeinnumer/MyLibUtils#current-time-with-custom-format))
+- [x] **Is Date In Range?**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#is-date-in-range))
+- [x] **Calculate Date**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#calculate-date))
 
 ## Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
