@@ -31,10 +31,11 @@ dependencies {
 ```
 
 ## Feature List
-- [x] Convert **Time Format**. example from `yyyy-MM-dd` to `dd-MM-yyyy`.
-- [x] **Current Time** with custom format. example `yyyy-MM-dd hh:mm`.
-- [x] **Is Date In Range?**.
-- [x] **Calculate Date**.
+- [x] **Convert Time Format**. example from `2020-10-14` to `14-10-2020`. ([DOCS](https://github.com/gzeinnumer/MyLibUtils#convert-time-format))
+- [x] **Current Time** with custom format. example `2020-10-14 16:50`.([DOCS](https://github.com/gzeinnumer/MyLibUtils#current-time-with-custom-format))
+- [x] **Is Date In Range?**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#is-date-in-range))
+- [x] **Calculate Date**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#calculate-date))
+- [x] **Manipulation String**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#manipulation-string))
 
 ## Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
@@ -82,9 +83,10 @@ Log.d(TAG, "onCreate: currentTime : $currentTime")
 ### **Is Date In Range?**
 To check your date is in range between 2 date or not.
 > **Java**
-* Date with `String`
 ```java
 //please make sure your date format are the same.
+
+//with String
 String toCheck = "07/10/2020";
 String startDate ="04/10/2020";
 String endDate = "08/10/2020";
@@ -92,9 +94,8 @@ String endDate = "08/10/2020";
 boolean isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate);
 
 Log.d(TAG, "onCreate: "+isInRange);
-```
-* Date with `Date()`
-```java
+
+//or `Date()`
 try {
     String formatDate = "dd/MM/yyyy";
     SimpleDateFormat df = new SimpleDateFormat(formatDate);
@@ -111,9 +112,9 @@ try {
 }
 ```
 > **Kotlin**
-* Date with `String`
 ```kotlin
 //please make sure your date format are the same.
+
 //with String
 val toCheck = "07/10/2020"
 val startDate ="04/10/2020"
@@ -122,9 +123,7 @@ val endDate = "08/10/2020"
 val isInRange = MyBaseUtilsDate.checkBetween(toCheck, startDate,endDate)
 
 Log.d(TAG, "onCreate: "+isInRange)
-```
-* Date with `Date()`
-```kotlin
+
 //or `Date()`
 try {
     val formatDate = "dd/MM/yyyy"
@@ -170,6 +169,67 @@ calculateDate.addMinutes(2)
 
 val result = calculateDate.getResult()
 Log.d(TAG, "onCreate: "+result);
+```
+
+### **Manipulation String**
+Make some modification to your `String` value to get value that you need.
+> **Java**
+```java
+String str = "!!??!@Hello Zein";
+
+String result_1 = MyBaseUtilsString.removeLastChar(str);
+Log.d(TAG, "onCreate_1: "+ result_1); //   !!??!@Hello Zei
+
+String result_2 = MyBaseUtilsString.removeLastCharCustomLength(str,3);
+Log.d(TAG, "onCreate_2: "+ result_2); //   !!??!@Hello Z
+
+String result_3 = MyBaseUtilsString.removeAllSimbol(str,"");
+Log.d(TAG, "onCreate_3: "+ result_3); //   HelloZein
+
+String result_4 = MyBaseUtilsString.removeSpesificSimbol(str,"","!","?","@");
+Log.d(TAG, "onCreate_4: "+ result_4); //   Hello Zein
+
+String result_5 = MyBaseUtilsString.removeFirstChar(str);
+Log.d(TAG, "onCreate_5: "+ result_5); //   !??!@Hello Zein
+
+String result_6 = MyBaseUtilsString.removeFirstCharCustomLength(str,3);
+Log.d(TAG, "onCreate_6: "+ result_6); //   @Hello Zein
+
+String url = "https://asset-a.grid.id/crop/0x0:0x0/360x240/photo/2020/04/09/663219154.png";
+String result_7 = MyBaseUtilsString.getNameFromUrl(url);
+Log.d(TAG, "onCreate_7: "+ result_7); //   663219154.png
+
+String result_8 = MyBaseUtilsString.removeExtension(result_7);
+Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
+```
+> **Kotlin**
+```kotlin
+val str = "!!??!@Hello Zein";
+
+val result_1 = MyBaseUtilsString.removeLastChar(str);
+Log.d(TAG, "onCreate_1: "+ result_1); //   !!??!@Hello Zei
+
+val result_2 = MyBaseUtilsString.removeLastCharCustomLength(str,3);
+Log.d(TAG, "onCreate_2: "+ result_2); //   !!??!@Hello Z
+
+val result_3 = MyBaseUtilsString.removeAllSimbol(str,"");
+Log.d(TAG, "onCreate_3: "+ result_3); //   HelloZein
+
+val result_4 = MyBaseUtilsString.removeSpesificSimbol(str,"","!","?","@");
+Log.d(TAG, "onCreate_4: "+ result_4); //   Hello Zein
+
+val result_5 = MyBaseUtilsString.removeFirstChar(str);
+Log.d(TAG, "onCreate_5: "+ result_5); //   !??!@Hello Zein
+
+val result_6 = MyBaseUtilsString.removeFirstCharCustomLength(str,3);
+Log.d(TAG, "onCreate_6: "+ result_6); //   @Hello Zein
+
+val url = "https://asset-a.grid.id/crop/0x0:0x0/360x240/photo/2020/04/09/663219154.png";
+val result_7 = MyBaseUtilsString.getNameFromUrl(url);
+Log.d(TAG, "onCreate_7: "+ result_7); //   663219154.png
+
+val result_8 = MyBaseUtilsString.removeExtension(result_7);
+Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
 ```
 
 ---
