@@ -45,7 +45,7 @@ dependencies {
 
 ### Convert **Time Format**.
 > **Java**
-    ```
+
     String value ="30-08-2020";
 
     String oldFormat = "dd-MM-yyyy";
@@ -54,7 +54,7 @@ dependencies {
     String reformatOneString = MyBaseUtilsDate.reformatDate(value,oldFormat,newFormat, Locale.getDefault());
     
     Log.d(TAG, "onCreate: "+reformatOneString);
-    ```
+
 > **Kotlin**
 ```kotlin
 var value = "30-08-2020"
