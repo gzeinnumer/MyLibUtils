@@ -45,10 +45,9 @@ dependencies {
 
 ### Convert **Time Format**.
 > **Java**
-    
-    ```java
+    ```
     String value ="30-08-2020";
-    
+
     String oldFormat = "dd-MM-yyyy";
     String newFormat = "yyyy-MM-dd";
     
@@ -56,21 +55,18 @@ dependencies {
     
     Log.d(TAG, "onCreate: "+reformatOneString);
     ```
-    
 > **Kotlin**
+```kotlin
+var value = "30-08-2020"
+Log.d(TAG, "onCreate: before : $value")
 
+val oldFormat = "dd-MM-yyyy"
+val newFormat = "yyyy-MM-dd"
 
-    ```
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 214) {
-            if (resultCode == RESULT_OK) {
-                assert data != null;
-                list = data.getStringArrayExtra("resultData");
-            }
-        }
-    }
+value = value.reformatDate(oldFormat,newFormat, Locale.getDefault())
+
+Log.d(TAG, "onCreate: after : $value")
+```
 
 ### **Current Time** with custom format.
 > **Java**
