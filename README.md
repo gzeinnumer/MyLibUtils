@@ -59,17 +59,18 @@ dependencies {
     
 > **Kotlin**
 
-    ```kotlin
-    var value = "30-08-2020"
-    Log.d(TAG, "onCreate: before : $value")
-    
-    val oldFormat = "dd-MM-yyyy"
-    val newFormat = "yyyy-MM-dd"
-    
-    value = value.reformatDate(oldFormat,newFormat, Locale.getDefault())
-    
-    Log.d(TAG, "onCreate: after : $value")
+
     ```
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 214) {
+            if (resultCode == RESULT_OK) {
+                assert data != null;
+                list = data.getStringArrayExtra("resultData");
+            }
+        }
+    }
 
 ### **Current Time** with custom format.
 > **Java**
