@@ -44,17 +44,17 @@ dependencies {
 ## Use
 
 ### Convert **Time Format**.
-> **Java**
-```java
-String value ="30-08-2020";
-
-String oldFormat = "dd-MM-yyyy";
-String newFormat = "yyyy-MM-dd";
-
-String reformatOneString = MyBaseUtilsDate.reformatDate(value,oldFormat,newFormat, Locale.getDefault());
-
-Log.d(TAG, "onCreate: "+reformatOneString);
-```
+    > **Java**
+    ```java
+    String value ="30-08-2020";
+    
+    String oldFormat = "dd-MM-yyyy";
+    String newFormat = "yyyy-MM-dd";
+    
+    String reformatOneString = MyBaseUtilsDate.reformatDate(value,oldFormat,newFormat, Locale.getDefault());
+    
+    Log.d(TAG, "onCreate: "+reformatOneString);
+    ```
 > **Kotlin**
 ```kotlin
 var value = "30-08-2020"
