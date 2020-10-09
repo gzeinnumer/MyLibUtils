@@ -31,7 +31,7 @@ dependencies {
 ```
 
 ## Feature List
-- [x] **Convert Time Format**. example from `2020-10-14` to `14-10-2020`. ([DOCS](https://github.com/gzeinnumer/MyLibUtils#convert-time-format))
+- [x] **Convert Time Format**. example from `2020-10-14` to `14-10-2020`. ([DOCS](#convert-time-format))
 - [x] **Current Time** with custom format. example `2020-10-14 16:50`.([DOCS](https://github.com/gzeinnumer/MyLibUtils#current-time-with-custom-format))
 - [x] **Is Date In Range?**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#is-date-in-range))
 - [x] **Calculate Date**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#calculate-date))
@@ -45,16 +45,16 @@ dependencies {
 
 ### Convert **Time Format**.
 > **Java**
+```
+String value ="30-08-2020";
 
-    String value ="30-08-2020";
+String oldFormat = "dd-MM-yyyy";
+String newFormat = "yyyy-MM-dd";
 
-    String oldFormat = "dd-MM-yyyy";
-    String newFormat = "yyyy-MM-dd";
-    
-    String reformatOneString = MyBaseUtilsDate.reformatDate(value,oldFormat,newFormat, Locale.getDefault());
-    
-    Log.d(TAG, "onCreate: "+reformatOneString);
+String reformatOneString = MyBaseUtilsDate.reformatDate(value,oldFormat,newFormat, Locale.getDefault());
 
+Log.d(TAG, "onCreate: "+reformatOneString);
+```
 > **Kotlin**
 ```kotlin
 var value = "30-08-2020"
