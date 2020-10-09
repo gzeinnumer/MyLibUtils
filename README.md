@@ -18,7 +18,7 @@
 
 ---
 ## Download
-Add maven jitpack.io in build.gradle (Project) :
+Add maven `jitpack.io` and `depedencies` in build.gradle (Project) :
 ```gradle
 // build.gradle project
 allprojects {
