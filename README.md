@@ -32,10 +32,24 @@ dependencies {
 
 ## Feature List
 - [x] **Convert Time Format**. example from `2020-10-14` to `14-10-2020`. ([DOCS](#convert-time-format))
-- [x] **Current Time** with custom format. example `2020-10-14 16:50`.([DOCS](https://github.com/gzeinnumer/MyLibUtils#current-time-with-custom-format))
-- [x] **Is Date In Range?**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#is-date-in-range))
-- [x] **Calculate Date**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#calculate-date))
-- [x] **Manipulation String**.([DOCS](https://github.com/gzeinnumer/MyLibUtils#manipulation-string))
+- [x] **Current Time** with custom format. example `2020-10-14 16:50`.([DOCS](#current-time-with-custom-format))
+- [x] **Is Date In Range?**.([DOCS](#is-date-in-range))
+- [x] **Calculate Date**.([DOCS](#calculate-date))
+  - Add Year
+  - Add Month
+  - Add Day
+  - Add Week
+  - Add Hour
+  - Add Minutes
+- [x] **Manipulation String**.([DOCS](#manipulation-string))
+  - Remove Last Char
+  - Remove Last Char Custom Length
+  - Remove All Simbol
+  - Remove Spesific Simbol
+  - Remove First Char
+  - Remove First Char Custom Length
+  - Get Name From Url
+  - Remove Extension
 
 ## Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
@@ -43,7 +57,7 @@ dependencies {
 ---
 ## Use
 
-### Convert **Time Format**.
+### Convert Time Format.
 > **Java**
 ```
 String value ="30-08-2020";
@@ -51,7 +65,12 @@ String value ="30-08-2020";
 String oldFormat = "dd-MM-yyyy";
 String newFormat = "yyyy-MM-dd";
 
-String reformatOneString = MyBaseUtilsDate.reformatDate(value,oldFormat,newFormat, Locale.getDefault());
+String reformatOneString = MyBaseUtilsDate.reformatDate(
+        value, 
+        oldFormat, 
+        newFormat, 
+        Locale.getDefault()
+    );
 
 Log.d(TAG, "onCreate: "+reformatOneString);
 ```
