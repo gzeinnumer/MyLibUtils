@@ -81,26 +81,26 @@ Log.d(TAG, "onCreate: before "+value+" after "+reformatOneString); //2020-08-30
 > **Kotlin**
 ```kotlin
 var value = "30-08-2020"
-Log.d(TAG, "onCreate: before : $value")
+Log.d(TAG, "onCreate: before : $value") //30-08-2020
 
 val oldFormat = "dd-MM-yyyy"
 val newFormat = "yyyy-MM-dd"
 
 value = value.reformatDate(oldFormat,newFormat, Locale.getDefault())
 
-Log.d(TAG, "onCreate: after : $value")
+Log.d(TAG, "onCreate: after : $value") //2020-08-30
 ```
 
 ### Current Time with custom format.
 > **Java**
 ```java
 String currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
-Log.d(TAG, "onCreate: "+currentTime);
+Log.d(TAG, "onCreate: "+currentTime); //2020-10-14
 ```
 > **Kotlin**
 ```kotlin
 val currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault())
-Log.d(TAG, "onCreate: currentTime : $currentTime")
+Log.d(TAG, "onCreate: currentTime : $currentTime") //2020-10-14
 ```
 
 ### **Is Date In Range?**
@@ -145,7 +145,7 @@ val endDate = "08/10/2020"
 
 val isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate)
 
-Log.d(TAG, "onCreate: "+isInRange)
+Log.d(TAG, "onCreate: "+isInRange) //true
 
 //or `Date()`
 try {
@@ -157,7 +157,7 @@ try {
 
     val isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate)
 
-    Log.d(TAG, "onCreate: "+isInRange);  //true
+    Log.d(TAG, "onCreate: "+isInRange) //true
 } catch (e : ParseException) {
     
 }
