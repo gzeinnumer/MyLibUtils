@@ -1,6 +1,6 @@
 package com.gzeinnumer.gznutils.utils;
 
-public class MyBaseUtilsString {
+public class MBUtilsString {
 
     public static String removeLastChar(String text) {
         if (text == null) {
