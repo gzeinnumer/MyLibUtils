@@ -41,8 +41,8 @@ dependencies {
 - [x] **Calculate Date**.([DOCS](#calculate-date))
   - Add Year
   - Add Month
-  - Add Day
   - Add Week
+  - Add Day
   - Add Hour
   - Add Minutes
 - [x] **Manipulation String**.([DOCS](#manipulation-string))
@@ -76,31 +76,31 @@ String reformatOneString = MBUtilsDate.reformatDate(
         Locale.getDefault()
     );
 
-Log.d(TAG, "onCreate: "+reformatOneString);
+Log.d(TAG, "onCreate: before "+value+" after "+reformatOneString); //2020-08-30
 ```
 > **Kotlin**
 ```kotlin
 var value = "30-08-2020"
-Log.d(TAG, "onCreate: before : $value")
+Log.d(TAG, "onCreate: before : $value") //30-08-2020
 
 val oldFormat = "dd-MM-yyyy"
 val newFormat = "yyyy-MM-dd"
 
 value = value.reformatDate(oldFormat,newFormat, Locale.getDefault())
 
-Log.d(TAG, "onCreate: after : $value")
+Log.d(TAG, "onCreate: after : $value") //2020-08-30
 ```
 
 ### Current Time with custom format.
 > **Java**
 ```java
 String currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
-Log.d(TAG, "onCreate: "+currentTime);
+Log.d(TAG, "onCreate: "+currentTime); //2020-10-14
 ```
 > **Kotlin**
 ```kotlin
 val currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault())
-Log.d(TAG, "onCreate: currentTime : $currentTime")
+Log.d(TAG, "onCreate: currentTime : $currentTime") //2020-10-14
 ```
 
 ### **Is Date In Range?**
@@ -116,7 +116,7 @@ String endDate = "08/10/2020";
 
 boolean isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate);
 
-Log.d(TAG, "onCreate: "+isInRange);
+Log.d(TAG, "onCreate: "+isInRange); //true
 
 //or `Date()`
 try {
@@ -129,7 +129,7 @@ try {
 
     boolean isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate);
 
-    Log.d(TAG, "onCreate: "+isInRange);
+    Log.d(TAG, "onCreate: "+isInRange); //true
 } catch (ParseException e) {
     
 }
@@ -145,7 +145,7 @@ val endDate = "08/10/2020"
 
 val isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate)
 
-Log.d(TAG, "onCreate: "+isInRange)
+Log.d(TAG, "onCreate: "+isInRange) //true
 
 //or `Date()`
 try {
@@ -157,7 +157,7 @@ try {
 
     val isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate)
 
-    Log.d(TAG, "onCreate: "+isInRange);
+    Log.d(TAG, "onCreate: "+isInRange) //true
 } catch (e : ParseException) {
     
 }
@@ -171,13 +171,14 @@ Add date with simple way.
 String time = "2014-01-11 10:10";
 String pattern = "yyyy-MM-dd HH:mm";
 
-CalculateDate calculateDate = new CalculateDate(time, pattern).addYear(2).addMonth(2).addDay(2);
+CalculateDate calculateDate = new CalculateDate(time, pattern).addYear(2).addMonth(2);
 calculateDate.addWeek(1);
+calculateDate.addDay(2);
 calculateDate.addHour(2);
 calculateDate.addMinutes(2);
 
 String result = calculateDate.getResult();
-Log.d(TAG, "onCreate: "+result);
+Log.d(TAG, "onCreate: "+result); //2016-03-20 12:12
 ```
 > **Kotlin**
 ```kotlin
@@ -191,7 +192,7 @@ calculateDate.addHour(2)
 calculateDate.addMinutes(2)
 
 val result = calculateDate.getResult()
-Log.d(TAG, "onCreate: "+result);
+Log.d(TAG, "onCreate: "+result); //2016-03-20 12:12
 ```
 
 ### **Manipulation String**
