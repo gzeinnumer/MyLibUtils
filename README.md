@@ -18,7 +18,7 @@
 
 ---
 ## Download
-**Step 1.** add maven jitpack.io in build.gradle (Project) :
+Add maven jitpack.io in build.gradle (Project) :
 ```gradle
 // build.gradle project
 allprojects {
@@ -30,6 +30,7 @@ allprojects {
 
 // build.gradle app/module
 dependencies {
+  ...
   implementation 'com.github.gzeinnumer:MyLibUtils:version'
 }
 ```
