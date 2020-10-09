@@ -3,6 +3,10 @@
 </h1>
 
 <p align="center">
+  <img src="https://github.com/gzeinnumer/MyLibUtils/blob/master/preview/bg.jpg" width="400"/>
+</p>
+
+<p align="center">
     <a><img src="https://img.shields.io/badge/Version-0.3.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
