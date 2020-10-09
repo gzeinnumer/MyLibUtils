@@ -1,10 +1,10 @@
-<h1 align="center">
-    MyLibUtils
-</h1>
-
 <p align="center">
   <img src="https://github.com/gzeinnumer/MyLibUtils/blob/master/preview/bg.jpg" width="400"/>
 </p>
+
+<h1 align="center">
+    MyLibUtils
+</h1>
 
 <p align="center">
     <a><img src="https://img.shields.io/badge/Version-0.3.0-brightgreen.svg?style=flat"></a>
