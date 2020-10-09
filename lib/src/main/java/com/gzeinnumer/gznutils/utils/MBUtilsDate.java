@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class MyBaseUtilsDate {
+public class MBUtilsDate {
     public static String F_YEAR = "yyyy";
 
     public static String F_MONTH_NUMBER = "MM"; //01, 11
