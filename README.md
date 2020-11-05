@@ -60,7 +60,7 @@ dependencies {
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
 ---
-## Use
+## USE
 
 ### Convert Time Format.
 > **Java**
