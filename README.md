@@ -30,7 +30,7 @@ allprojects {
 
 // build.gradle app/module
 dependencies {
-  ...k
+  ...
   implementation 'com.github.gzeinnumer:MyLibUtils:version'
 }
 ```
