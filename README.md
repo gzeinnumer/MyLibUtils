@@ -36,10 +36,10 @@ dependencies {
 ```
 
 ## Feature List
-- [x] **Convert Time Format**. example from `2020-10-14` to `14-10-2020`.([DOCS](#convert-time-format))
-- [x] **Current Time** with custom format. example `2020-10-14 16:50`.([DOCS](#current-time-with-custom-format))
-- [x] **Is Date In Range?**. To validate is your date in range or not.([DOCS](#is-date-in-range))
-- [x] **Calculate Date**.([DOCS](#calculate-date))
+- [x] **Convert Time Format.** example from `2020-10-14` to `14-10-2020`. ([DOCS](#convert-time-format))
+- [x] **Current Time.** with custom format. example `2020-10-14 16:50`. ([DOCS](#current-time-with-custom-format))
+- [x] **Is Date In Range?.** to validate is your date in range or not. ([DOCS](#is-date-in-range))
+- [x] **Calculate Date.** ([DOCS](#calculate-date))
   - Add Year
   - Add Month
   - Add Week
@@ -92,6 +92,7 @@ value = value.reformatDate(oldFormat,newFormat, Locale.getDefault())
 Log.d(TAG, "onCreate: after : $value") //2020-08-30
 ```
 
+#
 ### Current Time with custom format.
 > **Java**
 ```java
@@ -104,6 +105,7 @@ val currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault())
 Log.d(TAG, "onCreate: currentTime : $currentTime") //2020-10-14
 ```
 
+#
 ### **Is Date In Range?**
 To check your date is in range between 2 date or not.
 > **Java**
@@ -164,7 +166,8 @@ try {
 }
 ```
 
-### **Calculate Date**
+#
+### **Calculate Date.**
 Add date with simple way.
 > **Java**
 ```java
@@ -196,7 +199,8 @@ val result = calculateDate.getResult()
 Log.d(TAG, "onCreate: "+result); //2016-03-20 12:12
 ```
 
-### **Manipulation String**
+#
+### **Manipulation String.**
 Make some modification to your `String` value to get value that you need.
 > **Java**
 ```java
