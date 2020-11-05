@@ -36,17 +36,17 @@ dependencies {
 ```
 
 ## Feature List
-- [x] **Convert Time Format.** example from `2020-10-14` to `14-10-2020`. ([DOCS](#convert-time-format))
-- [x] **Current Time.** with custom format. example `2020-10-14 16:50`. ([DOCS](#current-time-with-custom-format))
-- [x] **Is Date In Range?.** to validate is your date in range or not. ([DOCS](#is-date-in-range))
-- [x] **Calculate Date.** ([DOCS](#calculate-date))
+- [x] **Convert Time Format.** example from `2020-10-14` to `14-10-2020`. ([docs](#convert-time-format))
+- [x] **Current Time.** with custom format. example `2020-10-14 16:50`. ([docs](#current-time-with-custom-format))
+- [x] **Is Date In Range?.** to validate is your date in range or not. ([docs](#is-date-in-range))
+- [x] **Calculate Date.** ([docs](#calculate-date))
   - Add Year
   - Add Month
   - Add Week
   - Add Day
   - Add Hour
   - Add Minutes
-- [x] **Manipulation String**.([DOCS](#manipulation-string))
+- [x] **Manipulation String**. ([docs](#manipulation-string))
   - Remove Last Char
   - Remove Last Char Custom Length
   - Remove All Simbol
@@ -106,7 +106,7 @@ Log.d(TAG, "onCreate: currentTime : $currentTime") //2020-10-14
 ```
 
 #
-### **Is Date In Range?**
+### **Is Date In Range?.**
 To check your date is in range between 2 date or not.
 > **Java**
 ```java
