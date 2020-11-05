@@ -64,7 +64,7 @@ dependencies {
 
 ### Convert Time Format.
 > **Java**
-```
+```java
 String value ="30-08-2020";
 
 String oldFormat = "dd-MM-yyyy";
@@ -168,7 +168,7 @@ try {
 
 #
 ### **Calculate Date.**
-Add date with simple way.
+Add `date` and `time` with simple way.
 > **Java**
 ```java
 //please make sure time and pattern has same format
