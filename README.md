@@ -270,7 +270,7 @@ Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
 ---
 
 ### Contribution
-You can sent your constibution to `brance` `open-pull`.
+You can sent your constibution to `branche` `open-pull`.
 
 ---
 
