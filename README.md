@@ -263,6 +263,17 @@ Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
 
 ---
 
+### Version
+- 0.3.0
+  - First Release
+
+---
+
+### Contribution
+You can sent your constibution to `branche` `open-pull`.
+
+---
+
 ```
 Copyright 2020 M. Fadli Zein
 ```
