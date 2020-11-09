@@ -263,6 +263,12 @@ Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
 
 ---
 
+### Version
+- 0.3.0
+  - First Release
+  
+---
+
 ```
 Copyright 2020 M. Fadli Zein
 ```
