@@ -7,7 +7,7 @@
 </h1>
 
 <p align="center">
-    <a><img src="https://img.shields.io/badge/Version-0.3.0-brightgreen.svg?style=flat"></a>
+    <a><img src="https://img.shields.io/badge/Version-0.4.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
     <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
@@ -55,6 +55,7 @@ dependencies {
   - Remove First Char Custom Length
   - Get Name From Url
   - Remove Extension
+- [x] **File To Base64**. ([docs](#file-to-base64))
 
 ## Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
@@ -261,11 +262,23 @@ val result_8 = MBUtilsString.removeExtension(result_7);
 Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
 ```
 
+#
+### **File To Base64.**
+File Image From Path and convert to `Base64` with format `data:image/jpeg;base64,` + `....kagsfkajha`
+> **Java**
+```java
+String filePath = "/storage/emulated/0/YourFolder/file_image.jpg";
+val result_9 = MBBase64.convertToBase64FromPath(filePath);
+Log.d(TAG, "onCreate_9: "+ result_8); //   data:image/jpeg;base64,kasgfkaghaksfakgshalgal
+```
+
 ---
 
 ### Version
 - **0.3.0**
   - First Release
+- **0.4.0**
+  - convertToBase64FromPath
 
 ---
 
