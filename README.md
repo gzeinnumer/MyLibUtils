@@ -100,11 +100,6 @@ Log.d(TAG, "onCreate: after : $value") //2020-08-30
 String currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
 Log.d(TAG, "onCreate: "+currentTime); //2020-10-14
 ```
-> **Kotlin**
-```kotlin
-val currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault())
-Log.d(TAG, "onCreate: currentTime : $currentTime") //2020-10-14
-```
 
 #
 ### **Is Date In Range?.**
@@ -138,34 +133,6 @@ try {
     
 }
 ```
-> **Kotlin**
-```kotlin
-//please make sure your date format are the same.
-
-//with String
-val toCheck = "07/10/2020"
-val startDate ="04/10/2020"
-val endDate = "08/10/2020"
-
-val isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate)
-
-Log.d(TAG, "onCreate: "+isInRange) //true
-
-//or `Date()`
-try {
-    val formatDate = "dd/MM/yyyy"
-    val df = SimpleDateFormat(formatDate)
-    val toCheck  = df.parse("07/10/2020")
-    val startDate= df.parse("04/10/2020")
-    val endDate  = df.parse("08/10/2020")
-
-    val isInRange = MBUtilsDate.checkBetween(toCheck, startDate,endDate)
-
-    Log.d(TAG, "onCreate: "+isInRange) //true
-} catch (e : ParseException) {
-    
-}
-```
 
 #
 ### **Calculate Date.**
@@ -185,20 +152,6 @@ calculateDate.addMinutes(2);
 String result = calculateDate.getResult();
 Log.d(TAG, "onCreate: "+result); //2016-03-20 12:12
 ```
-> **Kotlin**
-```kotlin
-//please make sure time and pattern has same format
-val time = "2014-01-11 10:10"
-val pattern = "yyyy-MM-dd HH:mm"
-
-val calculateDate = CalculateDate(time, pattern).addYear(2).addMonth(2).addDay(2)
-calculateDate.addWeek(1)
-calculateDate.addHour(2)
-calculateDate.addMinutes(2)
-
-val result = calculateDate.getResult()
-Log.d(TAG, "onCreate: "+result); //2016-03-20 12:12
-```
 
 #
 ### **Manipulation String.**
@@ -207,58 +160,37 @@ Make some modification to your `String` value to get value that you need.
 ```java
 String str = "!!??!@Hello Zein";
 
+//Remove Last Char
 String result_1 = MBUtilsString.removeLastChar(str);
 Log.d(TAG, "onCreate_1: "+ result_1); //   !!??!@Hello Zei
 
+//Remove Last Char Custom Length
 String result_2 = MBUtilsString.removeLastCharCustomLength(str,3);
 Log.d(TAG, "onCreate_2: "+ result_2); //   !!??!@Hello Z
 
+//Remove All Simbol
 String result_3 = MBUtilsString.removeAllSimbol(str,"");
 Log.d(TAG, "onCreate_3: "+ result_3); //   HelloZein
 
+//Remove Spesific Simbol
 String result_4 = MBUtilsString.removeSpesificSimbol(str,"","!","?","@");
 Log.d(TAG, "onCreate_4: "+ result_4); //   Hello Zein
 
+//Remove First Char
 String result_5 = MBUtilsString.removeFirstChar(str);
 Log.d(TAG, "onCreate_5: "+ result_5); //   !??!@Hello Zein
 
+//Remove First Char Custom Length
 String result_6 = MBUtilsString.removeFirstCharCustomLength(str,3);
 Log.d(TAG, "onCreate_6: "+ result_6); //   ?!@Hello Zein
 
+//Get Name From Url
 String url = "https://asset-a.grid.id/crop/0x0:0x0/360x240/photo/2020/04/09/663219154.png";
 String result_7 = MBUtilsString.getNameFromUrl(url);
 Log.d(TAG, "onCreate_7: "+ result_7); //   663219154.png
 
+//Remove Extension
 String result_8 = MBUtilsString.removeExtension(result_7);
-Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
-```
-> **Kotlin**
-```kotlin
-val str = "!!??!@Hello Zein";
-
-val result_1 = MBUtilsString.removeLastChar(str);
-Log.d(TAG, "onCreate_1: "+ result_1); //   !!??!@Hello Zei
-
-val result_2 = MBUtilsString.removeLastCharCustomLength(str,3);
-Log.d(TAG, "onCreate_2: "+ result_2); //   !!??!@Hello Z
-
-val result_3 = MBUtilsString.removeAllSimbol(str,"");
-Log.d(TAG, "onCreate_3: "+ result_3); //   HelloZein
-
-val result_4 = MBUtilsString.removeSpesificSimbol(str,"","!","?","@");
-Log.d(TAG, "onCreate_4: "+ result_4); //   Hello Zein
-
-val result_5 = MBUtilsString.removeFirstChar(str);
-Log.d(TAG, "onCreate_5: "+ result_5); //   !??!@Hello Zein
-
-val result_6 = MBUtilsString.removeFirstCharCustomLength(str,3);
-Log.d(TAG, "onCreate_6: "+ result_6); //   @Hello Zein
-
-val url = "https://asset-a.grid.id/crop/0x0:0x0/360x240/photo/2020/04/09/663219154.png";
-val result_7 = MBUtilsString.getNameFromUrl(url);
-Log.d(TAG, "onCreate_7: "+ result_7); //   663219154.png
-
-val result_8 = MBUtilsString.removeExtension(result_7);
 Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
 ```
 
