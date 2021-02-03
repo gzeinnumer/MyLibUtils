@@ -10,14 +10,23 @@
     <a><img src="https://img.shields.io/badge/Version-0.4.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
-    <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
+    <a><img src="https://img.shields.io/badge/kotlin-Suport-green?logo=kotlin&style=flat"></a>
     <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
     <br>
     <p>Simple function for <b>Date</b> and <b>String</b>.</p>
 </p>
 
 ---
-## Download
+# Content List
+* [Download](#download)
+* [Feature List](#feature-list)
+* [Tech stack and 3rd library](#tech-stack-and-3rd-library)
+* [Usage](#usage)
+* [Version](#version)
+* [Contribution](#contribution)
+
+---
+# Download
 Add maven `jitpack.io` and `dependencies` in `build.gradle (Project)` :
 ```gradle
 // build.gradle project
@@ -35,7 +44,8 @@ dependencies {
 }
 ```
 
-## Feature List
+---
+# Feature List
 - [x] **Convert Time Format.** example from `2020-10-14` to `14-10-2020`. ([docs](#convert-time-format))
 - [x] **Current Time.** with custom format. example `2020-10-14 16:50`. ([docs](#current-time-with-custom-format))
 - [x] **Is Date In Range?.** to validate is your date in range or not. ([docs](#is-date-in-range))
@@ -57,11 +67,12 @@ dependencies {
   - Remove Extension
 - [x] **File To Base64**. ([docs](#file-to-base64))
 
-## Tech stack and 3rd library
+---
+# Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
 ---
-## USE
+# Usage
 
 ### Convert Time Format.
 > **Java**
@@ -206,7 +217,7 @@ Log.d(TAG, "onCreate_9: "+ result_8); //   data:image/jpeg;base64,kasgfkaghaksfa
 
 ---
 
-### Version
+## Version
 - **0.3.0**
   - First Release
 - **0.4.0**
@@ -214,7 +225,7 @@ Log.d(TAG, "onCreate_9: "+ result_8); //   data:image/jpeg;base64,kasgfkaghaksfa
 
 ---
 
-### Contribution
+## Contribution
 You can sent your constibution to `branche` `open-pull`.
 
 ---
