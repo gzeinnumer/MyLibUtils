@@ -43,6 +43,7 @@ dependencies {
 }
 ```
 
+---
 # Feature List
 - [x] **Convert Time Format.** example from `2020-10-14` to `14-10-2020`. ([docs](#convert-time-format))
 - [x] **Current Time.** with custom format. example `2020-10-14 16:50`. ([docs](#current-time-with-custom-format))
@@ -65,11 +66,11 @@ dependencies {
   - Remove Extension
 - [x] **File To Base64**. ([docs](#file-to-base64))
 
-## Tech stack and 3rd library
+---
+# Tech stack and 3rd library
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
 ---
-
 # USE
 
 ## Convert Time Format.
