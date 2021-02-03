@@ -10,7 +10,7 @@
     <a><img src="https://img.shields.io/badge/Version-0.4.0-brightgreen.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/ID-gzeinnumer-blue.svg?style=flat"></a>
     <a><img src="https://img.shields.io/badge/Java-Suport-green?logo=java&style=flat"></a>
-    <a><img src="https://img.shields.io/badge/Koltin-Suport-green?logo=kotlin&style=flat"></a>
+    <a><img src="https://img.shields.io/badge/kotlin-Suport-green?logo=kotlin&style=flat"></a>
     <a href="https://github.com/gzeinnumer"><img src="https://img.shields.io/github/followers/gzeinnumer?label=follow&style=social"></a>
     <br>
     <p>Simple function for <b>Date</b> and <b>String</b>.</p>
@@ -18,8 +18,11 @@
 
 ---
 # Content List
-### [Download](#download)
-### [Download](#download)
+* [Download](#download)
+* [Feature List](#feature-list)
+* [Use](#use)
+* [Version](#version)
+* [Contribution](#contribution)
 
 ---
 # Download
@@ -66,6 +69,7 @@ dependencies {
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
 ---
+
 # USE
 
 ## Convert Time Format.
