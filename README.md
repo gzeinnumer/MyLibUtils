@@ -226,7 +226,7 @@ Log.d(TAG, "onCreate_9: "+ result_8); //   data:image/jpeg;base64,kasgfkaghaksfa
 ---
 
 ## Contribution
-You can sent your constibution to `branche` `open-pull`.
+You can sent your constibution to `branch` `open-pull`.
 
 ---
 
