@@ -17,7 +17,12 @@
 </p>
 
 ---
-## Download
+# Content List
+### [Download](#download)
+### [Download](#download)
+
+---
+# Download
 Add maven `jitpack.io` and `dependencies` in `build.gradle (Project)` :
 ```gradle
 // build.gradle project
@@ -35,7 +40,7 @@ dependencies {
 }
 ```
 
-## Feature List
+# Feature List
 - [x] **Convert Time Format.** example from `2020-10-14` to `14-10-2020`. ([docs](#convert-time-format))
 - [x] **Current Time.** with custom format. example `2020-10-14 16:50`. ([docs](#current-time-with-custom-format))
 - [x] **Is Date In Range?.** to validate is your date in range or not. ([docs](#is-date-in-range))
@@ -61,9 +66,9 @@ dependencies {
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
 ---
-## USE
+# USE
 
-### Convert Time Format.
+## Convert Time Format.
 > **Java**
 ```java
 String value ="30-08-2020";
@@ -94,7 +99,7 @@ Log.d(TAG, "onCreate: after : $value") //2020-08-30
 ```
 
 #
-### Current Time with custom format.
+## Current Time with custom format.
 > **Java**
 ```java
 String currentTime = MBUtilsDate.getCurrentTime("yyyy-MM-dd", Locale.getDefault());
@@ -102,7 +107,7 @@ Log.d(TAG, "onCreate: "+currentTime); //2020-10-14
 ```
 
 #
-### **Is Date In Range?.**
+## **Is Date In Range?.**
 To check your date is in range between 2 date or not.
 > **Java**
 ```java
@@ -135,7 +140,7 @@ try {
 ```
 
 #
-### **Calculate Date.**
+## **Calculate Date.**
 Add `date` and `time` with simple way.
 > **Java**
 ```java
@@ -154,7 +159,7 @@ Log.d(TAG, "onCreate: "+result); //2016-03-20 12:12
 ```
 
 #
-### **Manipulation String.**
+## **Manipulation String.**
 Make some modification to your `String` value to get value that you need.
 > **Java**
 ```java
@@ -195,7 +200,7 @@ Log.d(TAG, "onCreate_8: "+ result_8); //   663219154
 ```
 
 #
-### **File To Base64.**
+## **File To Base64.**
 File Image From Path and convert to `Base64` with format `data:image/jpeg;base64,` + `....kagsfkajha`
 > **Java**
 ```java
@@ -206,7 +211,7 @@ Log.d(TAG, "onCreate_9: "+ result_8); //   data:image/jpeg;base64,kasgfkaghaksfa
 
 ---
 
-### Version
+## Version
 - **0.3.0**
   - First Release
 - **0.4.0**
@@ -214,7 +219,7 @@ Log.d(TAG, "onCreate_9: "+ result_8); //   data:image/jpeg;base64,kasgfkaghaksfa
 
 ---
 
-### Contribution
+## Contribution
 You can sent your constibution to `branche` `open-pull`.
 
 ---
