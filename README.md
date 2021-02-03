@@ -21,7 +21,7 @@
 * [Download](#download)
 * [Feature List](#feature-list)
 * [Tech stack and 3rd library](#tech-stack-and-3rd-library)
-* [Use](#use)
+* [Usage](#usage)
 * [Version](#version)
 * [Contribution](#contribution)
 
@@ -72,7 +72,7 @@ dependencies {
 - SimpleDateFormat ([docs](https://developer.android.com/reference/java/text/SimpleDateFormat))
 
 ---
-# USE
+# Usage
 
 ### Convert Time Format.
 > **Java**
